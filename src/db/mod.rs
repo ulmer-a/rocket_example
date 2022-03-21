@@ -36,7 +36,7 @@ pub async fn insert_user(username: String, password_hash: String, conn: &MainDat
         let user = User {
             id: None,
             username: username,
-            password_hash: Some(password_hash)
+            password_hash: Some(password_hash),
         };
         if let Err(error) = diesel::insert_into(users::table).values(&user).execute(c) {
             println!("insert user: {}", error);
@@ -44,7 +44,8 @@ pub async fn insert_user(username: String, password_hash: String, conn: &MainDat
         } else {
             true
         }
-    }).await
+    })
+    .await
 }
 
 #[database("main_db")]

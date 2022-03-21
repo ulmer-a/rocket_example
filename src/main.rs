@@ -1,7 +1,7 @@
 mod db;
 mod login;
 
-use rocket::{fairing::AdHoc, routes, response::Redirect};
+use rocket::{fairing::AdHoc, response::Redirect, routes};
 
 #[macro_use]
 extern crate rocket;
@@ -20,5 +20,8 @@ fn rocket() -> _ {
     rocket::build()
         .attach(db::MainDatabase::fairing())
         .attach(AdHoc::on_ignite("DB Migrations", db::migrations))
-        .mount("/", routes![index, login::base, login::form, login::register])
+        .mount(
+            "/",
+            routes![index, login::base, login::form, login::register],
+        )
 }

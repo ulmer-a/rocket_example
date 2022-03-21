@@ -6,4 +6,4 @@ diesel ORM and an sqlite database, as well as the `pbkdf2` crate for password ha
 https://rocket.rs
 
 You probably need to install `libsqlite3-dev`. Then start by typing `cargo run` and visit
-http://localhost:8000.
+http://localhost:8000. Build using nightly rust!
