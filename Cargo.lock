@@ -570,17 +570,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "efaa7b300f3b5fe8eb6bf21ce3895e1751d9665086af2d64b42f19701015ff4f"
 
 [[package]]
-name = "library_mgmt"
-version = "0.1.0"
-dependencies = [
- "diesel",
- "diesel_migrations",
- "pbkdf2",
- "rocket",
- "rocket_sync_db_pools",
-]
-
-[[package]]
 name = "libsqlite3-sys"
 version = "0.22.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1026,6 +1015,17 @@ dependencies = [
  "rocket_http",
  "syn",
  "unicode-xid",
+]
+
+[[package]]
+name = "rocket_example"
+version = "0.1.0"
+dependencies = [
+ "diesel",
+ "diesel_migrations",
+ "pbkdf2",
+ "rocket",
+ "rocket_sync_db_pools",
 ]
 
 [[package]]
