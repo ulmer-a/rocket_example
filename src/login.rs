@@ -5,7 +5,7 @@ use pbkdf2::{Pbkdf2, password_hash::{PasswordVerifier, PasswordHash,  SaltString
 
 #[get("/login")]
 pub async fn base() -> Result<NamedFile, NotFound<String>> {
-    NamedFile::open("login.html")
+    NamedFile::open("static/login.html")
         .await
         .map_err(|e| NotFound(e.to_string()))
 }
