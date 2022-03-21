@@ -8,6 +8,7 @@ pub(crate) mod schema;
 pub struct User {
     pub id: i32,
     pub username: String,
+    pub password_hash: Option<String>,
 }
 
 use schema::users::dsl::username as user_field;
