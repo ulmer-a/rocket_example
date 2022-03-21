@@ -26,5 +26,5 @@ fn rocket() -> _ {
     rocket::build()
         .attach(db::MainDatabase::fairing())
         .attach(AdHoc::on_ignite("DB Migrations", db::migrations))
-        .mount("/", routes![login::base, login::form])
+        .mount("/", routes![login::base, login::form, login::register])
 }

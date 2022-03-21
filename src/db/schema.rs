@@ -2,7 +2,7 @@ use diesel::*;
 
 table! {
     users(id) {
-        id -> Integer,
+        id -> Nullable<Integer>,
         username -> VarChar,
         password_hash -> Nullable<VarChar>,
     }
